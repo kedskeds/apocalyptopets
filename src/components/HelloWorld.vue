@@ -3,12 +3,15 @@
     <h1>{{ msg }}</h1>
     <div class="image">
       <img src="../assets/goat.svg" alt="Goat Pet" class="goat">
-      <img src="../assets/goat-eye/goat-eye-1.svg" alt="Goat Eye Option 1" class="goat-eye option-1">
-      <img src="../assets/goat-eye/goat-eye-2.svg" alt="Goat Eye Option 2" class="goat-eye option-2">
-      <img src="../assets/goat-eye/goat-eye-3.svg" alt="Goat Eye Option 3" class="goat-eye option-3">
-      <img src="../assets/hats/hat.svg" alt="" class="hat">
+      <img
+        v-for="accessory in accessories"
+        :key="accessory.alt"
+        :src="accessory.src"
+        :alt="accessory.alt"
+        :class="accessory.wearing ? accessory.class : 'hide'">
     </div>
     <button v-on:click="decode">Decode</button>
+    <button v-on:click="toggleAccessories">Toggle Accessories</button>
   </div>
 </template>
 
@@ -18,13 +21,44 @@ export default {
   data() {
     return {
       msg: 'Turn back before it\'s too late'.split('').reverse().join(''),
-    }
+      accessories: [
+        {
+          src: require('../assets/goat-eye/goat-eye-1.svg'),
+          alt: 'Goat Eye Option 1',
+          class: 'goat-eye option-1',
+          wearing: true,
+        },
+        {
+          src: require('../assets/goat-eye/goat-eye-2.svg'),
+          alt: 'Goat Eye Option 2',
+          class: 'goat-eye option-2',
+          wearing: true,
+        },
+        {
+          src: require('../assets/goat-eye/goat-eye-3.svg'),
+          alt: 'Goat Eye Option 3',
+          class: 'goat-eye option-3',
+          wearing: true,
+        },
+        {
+          src: require('../assets/hats/hat.svg'),
+          alt: 'hat',
+          class: 'hat',
+          wearing: true,
+        },
+      ],
+    };
   },
   methods: {
-    decode: function(){
-      this.msg = this.msg.split('').reverse().join('')
-    }
-  }
+    decode() {
+      this.msg = this.msg.split('').reverse().join('');
+    },
+    toggleAccessories() {
+      this.accessories.forEach((accessory) => {
+        accessory.wearing = !accessory.wearing;
+      });
+    },
+  },
 };
 </script>
 
