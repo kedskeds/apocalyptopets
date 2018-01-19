@@ -4,7 +4,7 @@
   <defs>
     <style>
       .goat-eye {
-        fill: #ea9999;
+        fill: #ea9999
       }
     </style>
   </defs>
@@ -17,10 +17,10 @@
     <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m402.47476 706.1264l0 0" fill-rule="evenodd"></path>
     <path fill="#000000" fill-opacity="0.0" d="m402.47476 706.1264l0 0" fill-rule="evenodd"></path>
     <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m402.47476 706.1264l0 0" fill-rule="evenodd"></path>
-    <path class="goat-eye" d="m434.32962 218.48396l0 0c-13.043976 -39.723602 -50.040497 -66.64607 -91.85043 -66.839874c-41.809967 -0.19380188 -79.054474 26.384552 -92.46614 65.985535z" fill-rule="evenodd"></path>
-    <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m434.32962 218.48396l0 0c-13.043976 -39.723602 -50.040497 -66.64607 -91.85043 -66.839874c-41.809967 -0.19380188 -79.054474 26.384552 -92.46614 65.985535z" fill-rule="evenodd"></path>
-    <path class="goat-eye" d="m725.82043 218.48396l0 0c-13.044006 -39.723602 -50.040466 -66.64607 -91.850464 -66.839874c-41.809937 -0.19380188 -79.05444 26.384552 -92.466125 65.985535z" fill-rule="evenodd"></path>
-    <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m725.82043 218.48396l0 0c-13.044006 -39.723602 -50.040466 -66.64607 -91.850464 -66.839874c-41.809937 -0.19380188 -79.05444 26.384552 -92.466125 65.985535z" fill-rule="evenodd"></path>
+    <path class="goat-eye" d="m438.0703 263.28064l0 0c6.235382 -41.339066 -14.677734 -82.03096 -51.920563 -101.02492c-37.24286 -18.993942 -82.461 -12.02919 -112.26218 17.291275z" fill-rule="evenodd"></path>
+    <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m438.0703 263.28064l0 0c6.235382 -41.339066 -14.677734 -82.03096 -51.920563 -101.02492c-37.24286 -18.993942 -82.461 -12.02919 -112.26218 17.291275z" fill-rule="evenodd"></path>
+    <path class="goat-eye" d="m694.9953 173.55785l0 0c-32.377625 -26.45549 -78.05023 -29.22815 -113.39044 -6.8836365c-35.34015 22.344513 -52.420288 64.79384 -42.40448 105.38805z" fill-rule="evenodd"></path>
+    <path stroke="#000000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m694.9953 173.55785l0 0c-32.377625 -26.45549 -78.05023 -29.22815 -113.39044 -6.8836365c-35.34015 22.344513 -52.420288 64.79384 -42.40448 105.38805z" fill-rule="evenodd"></path>
   </g>
 </svg>
 

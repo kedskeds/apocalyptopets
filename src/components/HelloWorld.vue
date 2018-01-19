@@ -3,8 +3,10 @@
     <h1>{{ msg }}</h1>
     <div class="image">
       <img src="../assets/goat.svg" alt="Goat Pet" class="goat">
-      <img src="../assets/goat-eye-1.svg" alt="Goat Eye Option 1" class="goat-eye option-1">
-      <img src="../assets/goat-eye-2.svg" alt="Goat Eye Option 1" class="goat-eye option-2">
+      <img src="../assets/goat-eye/goat-eye-1.svg" alt="Goat Eye Option 1" class="goat-eye option-1">
+      <img src="../assets/goat-eye/goat-eye-2.svg" alt="Goat Eye Option 2" class="goat-eye option-2">
+      <img src="../assets/goat-eye/goat-eye-3.svg" alt="Goat Eye Option 3" class="goat-eye option-3">
+      <img src="../assets/hats/hat.svg" alt="" class="hat">
     </div>
     <button v-on:click="decode">Decode</button>
   </div>
@@ -51,10 +53,10 @@ a {
 .image {
   position: relative;
 }
-.goat, .goat-eye {
+.goat, .goat-eye, .hat {
   height: 20rem;
 }
-.goat-eye {
+.goat-eye, .hat {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
