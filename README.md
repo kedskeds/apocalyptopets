@@ -19,7 +19,8 @@ npm run build --report
 
 # server runs at http://localhost:8081
 cd server
-npm start
+brew services start mongodb
+mongo & npm start
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
