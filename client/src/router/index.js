@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Pets from '@/components/Pets'
 import NewPet from '@/components/NewPet'
 import Posts from '@/components/Posts'
 import NewPost from '@/components/NewPost'
@@ -10,6 +11,11 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
+    {
+      path: '/pets',
+      name: 'Pets',
+      component: Pets
+    },
     {
       path: '/',
       name: 'NewPet',
@@ -29,6 +35,6 @@ export default new Router({
       path: '/posts/:id',
       name: 'EditPost',
       component: EditPost
-    }
+    },
   ]
 })

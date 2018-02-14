@@ -17,6 +17,36 @@ db.once("open", function(callback){
 });
 
 var Post = require("../models/post");
+var Pet = require("../models/pet");
+
+app.get('/pets', (req, res) => {
+  Pet.find({}, 'pindex accessoryArray', function (error, pets) {
+    if (error) { console.error(error); }
+    res.send({
+      pets: pets
+    })
+  }).sort({_id:-1})
+})
+
+app.post('/pets', (req, res) => {
+  var db = req.db;
+  var pindex = req.body.pindex;
+  var accessoryArray = req.body.accessoryArray;
+  var new_pet = new Pet({
+    pindex: pindex,
+    accessoryArray: accessoryArray
+  })
+
+  new_pet.save(function (error) {
+    if (error) {
+      console.log(error)
+    }
+    res.send({
+      success: true,
+      message: 'Pet saved successfully!'
+    })
+  })
+})
 
 app.get('/posts', (req, res) => {
   Post.find({}, 'title description', function (error, posts) {

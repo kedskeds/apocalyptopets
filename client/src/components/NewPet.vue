@@ -3,11 +3,11 @@
     <h1>New Pet</h1>
     <div class="image">
       <img
-        v-for="pet in pets"
-        :key="pet.id"
-        :src="pet.src"
-        :alt="pet.alt"
-        :class="pet.selected ? pet.class : 'hide'">
+        v-for="body in bodies"
+        :key="body.id"
+        :src="body.src"
+        :alt="body.alt"
+        :class="body.selected ? body.class : 'hide'">
       <img
         v-for="accessory in accessories"
         :key="accessory.alt"
@@ -18,18 +18,19 @@
     <selector
       title="Pets"
       :limit="1"
-      :items="pets">
+      :items="bodies">
     </selector>
     <selector
       title="Accessories"
       :limit="2"
       :items="accessories">
     </selector>
+    <button @click="savePet">Save</button>
   </div>
 </template>
 
 <script>
-
+import PetsService from '@/services/PetsService'
 import Selector from './Selector'
 export default {
   name: 'NewPet',
@@ -38,7 +39,7 @@ export default {
   },
   data() {
     return {
-      pets: [
+      bodies: [
         {
           id: 0,
           src: require('../assets/goat.svg'),
@@ -87,6 +88,15 @@ export default {
       ]
     };
   },
+  methods: {
+    async savePet() {
+      await PetsService.addPet({
+        pindex: 0,
+        accessoryArray: [1,2]
+      })
+      this.$router.push({ name: 'Pets' })
+    }
+  }
 };
 </script>
 <style scoped>
