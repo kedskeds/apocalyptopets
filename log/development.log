@@ -1,0 +1,34 @@
+Started GET "/" for ::1 at 2018-08-28 14:40:51 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 295ms
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/config
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/images
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/javascripts
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/stylesheets
+  /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/actioncable-5.1.6/lib/assets/compiled
+  /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/actionview-5.1.6/lib/assets/compiled
+  /Users/christineduane/Documents/Personal/apocalyptopets/node_modules):
+    4:     <title>Apocalyptopets</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_pack_tag 'application' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2157121610850959885_70278077336160'
+Started GET "/" for ::1 at 2018-08-28 14:43:14 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 860ms (Views: 858.7ms)
+
+
