@@ -80,6 +80,8 @@ export default {
         class: 'pet',
       },
       attributes: {
+        'HP': Math.floor((Math.random() * 50) + 1),
+        'MP': Math.floor((Math.random() * 50) + 1),
         'Strength': Math.floor((Math.random() * 10) + 1),
         'IQ': Math.floor((Math.random() * 5) + 1),
       },
