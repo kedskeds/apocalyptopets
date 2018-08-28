@@ -9,6 +9,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <li>Account</li>
+      <li>Register</li>
+      <li>Log In/Log Out</li>
+    </nav>
+    <nav class="side-nav">
+      <li>Explore</li>
+      <li>Inventory</li>
+    </nav>
+    <div class="main">
+      <%= yield %>
+    </div>
   </body>
 </html>
