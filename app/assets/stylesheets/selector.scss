@@ -1,0 +1,31 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.image {
+  position: relative;
+}
+.pet, .goat-eye, .hat, .image {
+  height: 20rem;
+}
+.pet, .goat-eye, .hat {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.goat-horn {
+  fill: blue;
+}
+.thumb {
+  width: 10%;
+  min-width: 100px;
+  margin: 1px;
+  border: 1px solid transparent;
+}
+.selected {
+  border-color: red;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apocalyptopets</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+
+  <body>
+    <nav>
+      <li>Account</li>
+      <li>Register</li>
+      <li>Log In/Log Out</li>
+    </nav>
+    <nav class="side-nav">
+      <li>Go Outside</li>
+      <li>Look at your Stuff</li>
+      <li>Make some money</li>
+      <li>Put out some fires</li>
+    </nav>
+    <div class="main">
+      <%= yield %>
+    </div>
+  </body>
+</html>

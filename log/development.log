@@ -1,0 +1,247 @@
+Started GET "/" for ::1 at 2018-08-28 14:40:51 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 295ms
+
+
+  
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
+Checked in these paths: 
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/config
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/images
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/javascripts
+  /Users/christineduane/Documents/Personal/apocalyptopets/app/assets/stylesheets
+  /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/actioncable-5.1.6/lib/assets/compiled
+  /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/actionview-5.1.6/lib/assets/compiled
+  /Users/christineduane/Documents/Personal/apocalyptopets/node_modules):
+    4:     <title>Apocalyptopets</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_pack_tag 'application' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2157121610850959885_70278077336160'
+Started GET "/" for ::1 at 2018-08-28 14:43:14 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 860ms (Views: 858.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 14:54:05 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1212ms (Views: 1026.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 14:57:31 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 14:57:51 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 14ms (Views: 12.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 14:58:38 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 14:58:54 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:00:54 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:05:20 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:08:08 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:08:32 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 27.3ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:20:28 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 8.6ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:26:11 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 37.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:26:13 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.3ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:28:37 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 21ms
+
+
+  
+ActionView::Template::Error (Undefined variable: "$c-purple".):
+    4:     <title>Apocalyptopets</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_pack_tag 'application' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/layout.scss:5
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1276059083288283541_70338658268380'
+Started GET "/" for ::1 at 2018-08-28 15:30:28 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 23ms
+
+
+  
+ActionView::Template::Error (Undefined variable: "$c-purple".):
+    4:     <title>Apocalyptopets</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_pack_tag 'application' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/layout.scss:5
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1276059083288283541_70338702005660'
+Started GET "/" for ::1 at 2018-08-28 15:30:38 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 42.2ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:38:11 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:38:38 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 32.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:39:06 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:39:24 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 8.9ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:40:16 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.5ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:40:34 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.7ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:40:35 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:41:07 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 11ms (Views: 10.0ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:41:15 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.4ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:42:31 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.8ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:44:49 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.4ms)
+
+
+Started GET "/" for ::1 at 2018-08-28 15:56:59 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+
+
