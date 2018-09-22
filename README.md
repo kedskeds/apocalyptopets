@@ -7,7 +7,7 @@
 > bin/rails webpacker:install
 > bin/rails webpacker:install:vue
 > bin/yarn install
-> # to run:
+# to run:
 > foreman start
 
 ```
