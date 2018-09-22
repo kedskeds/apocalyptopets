@@ -285,3 +285,67 @@ Migrating to DeviseCreateUsers (20180922005333)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2018-09-21 17:56:40 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (1.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/christineduane/Documents/Personal/apocalyptopets/public/packs
+Completed 200 OK in 3616ms (Views: 3614.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-09-21 17:56:59 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 59ms (Views: 45.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-21 17:57:09 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WE1nC03zxwNsbv3EjtnpKlB7gpHnU3rSxi7BYgnJqfMSEb6yffWE7JVFme2HYkU65EFKK0VxOnk7xQLkS3UjUw==", "user"=>{"email"=>"ckduane@pm.me", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ckduane@pm.me"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 170ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-21 17:57:19 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X12ntITpBkYAt9AaGMK9GYlZXr5sM6/xbk/KVerSWu0VAX4NtO9FqfmctDMReREJPWOWBM4R71qTpAnTqG7QTQ==", "user"=>{"email"=>"ckduane@pm.me", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ckduane@pm.me"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ckduane@pm.me"], ["encrypted_password", "$2a$11$tIHTDEZmr5fwf0G3KPI/reXvh3ythc1dk6nO/6uXBWUd2F/dlJ3zO"], ["created_at", "2018-09-22 00:57:19.817600"], ["updated_at", "2018-09-22 00:57:19.817600"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-21 17:57:19 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-21 17:59:16 -0700
+Processing by LandingController#index as HTML
+  Rendering landing/index.html.erb within layouts/application
+  Rendered landing/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-09-21 17:59:19 -0700
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/edit.html.erb within layouts/application
+  Rendered /Users/christineduane/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/registrations/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
