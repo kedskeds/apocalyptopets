@@ -1,1 +1,4 @@
-span= @user.email
+h3 User Info for #{@user.username}
+div Member since #{@user.created_at.strftime('%B %-d, %Y')}
+
+div= link_to 'Edit profile', edit_user_registration_path
