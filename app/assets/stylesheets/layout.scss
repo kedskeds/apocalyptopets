@@ -1,13 +1,11 @@
-@import "variables";
-
-html {
-  font-size: 62.5%;
+.flex-container {
+  display: flex;
 }
-nav {
-  background: $c-purple;
+.justify-center {
+  justify-content: center;
 }
-a {
-  color: $c-sea-green;
+.align-center {
+  align-items: center;
 }
 .hide {
   display: none;
