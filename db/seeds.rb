@@ -21,7 +21,7 @@ colors = Color.create!([
   { name: 'Purple' }
 ])
 
-attributes = Attribute.create!([
+stats = Stat.create!([
   { name: 'HP' },
   { name: 'PP' },
   { name: 'INT' },
@@ -49,3 +49,9 @@ accessories = Accessory.create!([
 
 
 Pet.create!(user_id: 1, species_id: 1, name: 'Pinky', color_id: 1)
+
+PetStat.create!(pet_id: 1, stat_id: 1, value: 30)
+PetStat.create!(pet_id: 1, stat_id: 2, value: 40)
+PetStat.create!(pet_id: 1, stat_id: 3, value: 7)
+PetStat.create!(pet_id: 1, stat_id: 4, value: 3)
+PetStat.create!(pet_id: 1, stat_id: 5, value: 8)

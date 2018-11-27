@@ -1,4 +1,15 @@
 h3 User Info for #{@user.username}
 div Member since #{@user.created_at.strftime('%B %-d, %Y')}
 
+/ div Count your blessings. You've been alive for #{time_alive} hours.
 div= link_to 'Edit profile', edit_user_registration_path
+
+- if has_pet?
+  h3 #{@user.username}'s Pets
+  - @user.pets.each do |pet|
+    div= pet.name
+    div= pet.species.name
+    div= (Time.now - pet.created_at.to_time)/1.day
+    div.age= time_alive(@pet)
+    - pet.pet_stats.each do |pet_stat|
+      div #{pet_stat.stat.name}: #{pet_stat.value}

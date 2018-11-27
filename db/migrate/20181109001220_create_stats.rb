@@ -1,6 +1,6 @@
-class CreateAttributes < ActiveRecord::Migration[5.1]
+class CreateStats < ActiveRecord::Migration[5.1]
   def change
-    create_table :attributes do |t|
+    create_table :stats do |t|
       t.string :name, null: false, uniqueness: true
 
       t.timestamps

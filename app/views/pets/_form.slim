@@ -1,0 +1,9 @@
+= form_for @pet do |f|
+  = f.label :name
+  = f.text_field :name, required: true
+
+  = f.label :color
+  = select :pet, :color_id, @colors.collect{ |c| [c.name, c.id] }
+
+  - @stats.each do |stat|
+    label= stat.name

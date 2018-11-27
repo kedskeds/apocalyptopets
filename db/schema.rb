@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181120230834) do
+ActiveRecord::Schema.define(version: 20181120205757) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accessories", force: :cascade do |t|
     t.integer "slot_id", null: false
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "attributes", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,25 +35,26 @@ ActiveRecord::Schema.define(version: 20181120230834) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pets", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "species_id", null: false
-    t.string "name", null: false
-    t.integer "color_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pets_accessories", force: :cascade do |t|
+  create_table "pet_accessories", force: :cascade do |t|
     t.integer "pet_id", null: false
     t.integer "accessory_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "pets_attributes", force: :cascade do |t|
+  create_table "pet_stats", force: :cascade do |t|
     t.integer "pet_id", null: false
-    t.integer "attribute_id", null: false
+    t.integer "stat_id", null: false
+    t.integer "value", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "species_id", null: false
+    t.string "name", null: false
+    t.integer "color_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,6 +66,12 @@ ActiveRecord::Schema.define(version: 20181120230834) do
   end
 
   create_table "species", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stats", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
