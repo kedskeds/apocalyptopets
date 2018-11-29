@@ -6999,3 +6999,609 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 240ms (Views: 148.2ms | ActiveRecord: 32.1ms)
 
 
+Started GET "/users/1" for ::1 at 2018-11-27 11:38:40 -0800
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering users/show.slim within layouts/application
+  [1m[36mPet Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPetStat Load (0.3ms)[0m  [1m[34mSELECT "pet_stats".* FROM "pet_stats" WHERE "pet_stats"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.slim within layouts/application (109.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2624ms (Views: 2547.9ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:38:44 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.6ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (31.6ms)
+  Rendered pets/new.slim within layouts/application (36.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 50.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:39:40 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.6ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (13.7ms)
+  Rendered pets/new.slim within layouts/application (19.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:39:46 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (11.4ms)
+  Rendered pets/new.slim within layouts/application (20.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:39:56 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (8.6ms)
+  Rendered pets/new.slim within layouts/application (20.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:31 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (11.5ms)
+  Rendered pets/new.slim within layouts/application (24.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:32 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.8ms)
+  Rendered pets/new.slim within layouts/application (12.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:33 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.4ms)
+  Rendered pets/new.slim within layouts/application (9.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:34 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.3ms)
+  Rendered pets/new.slim within layouts/application (9.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:35 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.2ms)
+  Rendered pets/new.slim within layouts/application (9.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:36 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.2ms)
+  Rendered pets/new.slim within layouts/application (9.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:40:37 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.1ms)
+  Rendered pets/new.slim within layouts/application (10.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:41:43 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (6.8ms)
+  Rendered pets/new.slim within layouts/application (18.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:42:15 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.7ms)
+  Rendered pets/new.slim within layouts/application (10.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:42:18 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.5ms)
+  Rendered pets/new.slim within layouts/application (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:43:16 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.6ms)
+  Rendered pets/new.slim within layouts/application (10.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 11:43:35 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (9.9ms)
+  Rendered pets/new.slim within layouts/application (17.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStat Load (0.6ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" INNER JOIN "pet_stats" ON "stats"."id" = "pet_stats"."stat_id" WHERE "pet_stats"."pet_id" = $1 LIMIT $2[0m  [["pet_id", 1], ["LIMIT", 11]]
+Started GET "/pets/new" for ::1 at 2018-11-27 13:02:20 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (7.8ms)
+  Rendered pets/new.slim within layouts/application (14.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT  "species".* FROM "species" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/pets/new" for ::1 at 2018-11-27 13:02:50 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (24.5ms)
+  Rendered pets/new.slim within layouts/application (29.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 52.6ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:02:59 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (7.2ms)
+  Rendered pets/new.slim within layouts/application (16.5ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:03:04 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (6.1ms)
+  Rendered pets/new.slim within layouts/application (10.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:03:08 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.5ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.9ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (13.5ms)
+  Rendered pets/new.slim within layouts/application (18.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:03:10 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.7ms)
+  Rendered pets/new.slim within layouts/application (11.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:03:20 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZAN0Szx9qVIT3qfAC0z+0GExsEctzK3qXtGCCwLPsUu1XOMznx5+qd2ZwBH/xVFONzcyt4dx2+2br7KektS2Q==", "pet"=>{"name"=>"Purps", "species_id"=>"2", "color_id"=>"2"}, "commit"=>"Manifest!"}
+Unpermitted parameters: :name, :species_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  Rendered pets/_form.slim (9.5ms)
+  Rendered pets/new.slim within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+    3:   = f.text_field :name, required: true
+    4: 
+    5:   = f.label :species
+    6:   = select :pet, :species_id, @species.collect{ |c| [c.name, c.id] }
+    7: 
+    8:   = f.label :color
+    9:   = select :pet, :color_id, @colors.collect{ |c| [c.name, c.id] }
+  
+app/views/pets/_form.slim:6:in `block in _app_views_pets__form_slim__137553191701629644_70329523310840'
+app/views/pets/_form.slim:1:in `_app_views_pets__form_slim__137553191701629644_70329523310840'
+app/views/pets/new.slim:20:in `_app_views_pets_new_slim__3545883209234525333_70329523836580'
+app/controllers/pets_controller.rb:16:in `create'
+Started GET "/pets/new" for ::1 at 2018-11-27 13:06:28 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.6ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (23.6ms)
+  Rendered pets/new.slim within layouts/application (28.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 54.2ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:06:37 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o8fmCUMWT380Nut7sRSg3u0t5yRo1UW3+/sR48Rerw70gphUoZvAINsP9uT2xoZglHX9L6p/sG/k7ukhkh7DEg==", "pet"=>{"name"=>"test", "species_id"=>"2", "color_id"=>"2"}, "commit"=>"Manifest!"}
+Unpermitted parameters: :name, :species_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.4ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (12.8ms)
+  Rendered pets/new.slim within layouts/application (20.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 36.6ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/pets" for ::1 at 2018-11-27 13:07:09 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uC+CZki9YTqjI5YjpbcSt6w520rTUPemXMAaIT8xz2rvavw7qjDuZUwai7ziZTQJ1WHBQRH6An5D1eLjaXGjdg==", "pet"=>{"name"=>"test", "species_id"=>"1", "color_id"=>"2"}, "commit"=>"Manifest!"}
+Unpermitted parameters: :name, :species_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.4ms)
+  Rendered pets/new.slim within layouts/application (9.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/pets/new" for ::1 at 2018-11-27 13:10:18 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.7ms)
+  Rendered pets/new.slim within layouts/application (9.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:10:22 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QG5SMJGJOa4HWGiGZGqQ95JE7f1HSJ8MS5lIvJ7LPmYXKyxtcwS28ehhdRkjuLZJ6xz39oXiatRUjLB+yItSeg==", "pet"=>{"name"=>"test", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+Unpermitted parameters: :name, :species_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (6.3ms)
+  Rendered pets/new.slim within layouts/application (10.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 32.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for ::1 at 2018-11-27 13:10:29 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering users/show.slim within layouts/application
+  [1m[36mPet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPetStat Load (0.3ms)[0m  [1m[34mSELECT "pet_stats".* FROM "pet_stats" WHERE "pet_stats"."pet_id" = $1[0m  [["pet_id", 1]]
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStat Load (0.1ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStat Load (0.1ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" WHERE "stats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered users/show.slim within layouts/application (27.2ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 57.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:23:43 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (28.4ms)
+  Rendered pets/new.slim within layouts/application (32.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 54.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/pets/new" for ::1 at 2018-11-27 13:24:03 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (29.8ms)
+  Rendered pets/new.slim within layouts/application (35.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 64.2ms | ActiveRecord: 15.8ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:24:09 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WUd6RQZhwhxAjBPgM5jR8DioArwUVWqK45Sp3HBf878OAgQY5OxNQ6+1Dn90SvdOQfAYt9b/n1L8gVEeJh+fow==", "pet"=>{"name"=>"test", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSpecies Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "species" WHERE "species"."name" = $1 AND ("species"."id" != $2) LIMIT $3[0m  [["name", "Goat"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  Rendered pets/_form.slim (6.0ms)
+  Rendered pets/new.slim within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `collect' for nil:NilClass):
+    3:   = f.text_field :name, required: true
+    4: 
+    5:   = f.label :species
+    6:   = select :pet, :species_id, @species.collect{ |c| [c.name, c.id] }
+    7: 
+    8:   = f.label :color
+    9:   = select :pet, :color_id, @colors.collect{ |c| [c.name, c.id] }
+  
+app/views/pets/_form.slim:6:in `block in _app_views_pets__form_slim__137553191701629644_70329513119240'
+app/views/pets/_form.slim:1:in `_app_views_pets__form_slim__137553191701629644_70329513119240'
+app/views/pets/new.slim:20:in `_app_views_pets_new_slim__3545883209234525333_70329513320360'
+app/controllers/pets_controller.rb:17:in `create'
+Started GET "/pets/new" for ::1 at 2018-11-27 13:24:16 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.7ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.8ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.6ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (42.8ms)
+  Rendered pets/new.slim within layouts/application (47.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 72.2ms | ActiveRecord: 24.0ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:24:21 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XV3LZ0MY59m0Uv422+kWPzGP/n8p52ZOyV+YFHmYbGcKGLU6oZVohltr46mcOzCBSNfkdOtNk5bWSmDWL9gAew==", "pet"=>{"name"=>"test", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSpecies Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "species" WHERE "species"."name" = $1 AND ("species"."id" != $2) LIMIT $3[0m  [["name", "Goat"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (5.9ms)
+  Rendered pets/new.slim within layouts/application (11.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 28.7ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" ORDER BY "pets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStat Load (0.3ms)[0m  [1m[34mSELECT  "stats".* FROM "stats" INNER JOIN "pet_stats" ON "stats"."id" = "pet_stats"."stat_id" WHERE "pet_stats"."pet_id" = $1 LIMIT $2[0m  [["pet_id", 1], ["LIMIT", 11]]
+Started GET "/pets/new" for ::1 at 2018-11-27 13:41:20 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.3ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (25.5ms)
+  Rendered pets/new.slim within layouts/application (30.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 50.8ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:41:30 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LDzzrQVTR0ampaChJuJt2X2WJE9qVOO4p3UkyKOKR3V7eY3w597IGUmcvT5hMEtnBM4+RKj+FmC4YNwK9coraQ==", "pet"=>{"name"=>"1", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `species' for #<Pet:0x00007fedbcbaf340>
+Did you mean?  species_id):
+  
+app/controllers/pets_controller.rb:15:in `create'
+Started PUT "/__web_console/repl_sessions/2dbb2400bb91532e2cf2854cb0f9051f" for ::1 at 2018-11-27 13:41:47 -0800
+Started PUT "/__web_console/repl_sessions/2dbb2400bb91532e2cf2854cb0f9051f" for ::1 at 2018-11-27 13:41:48 -0800
+Started POST "/pets" for ::1 at 2018-11-27 13:53:55 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LDzzrQVTR0ampaChJuJt2X2WJE9qVOO4p3UkyKOKR3V7eY3w597IGUmcvT5hMEtnBM4+RKj+FmC4YNwK9coraQ==", "pet"=>{"name"=>"1a", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 4.9ms)
+
+
+  
+NoMethodError (undefined method `species' for #<Pet:0x00007fedbbfad128>
+Did you mean?  species_id):
+  
+app/controllers/pets_controller.rb:15:in `create'
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:17 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:17 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:23 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:33 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:34 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:37 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:38 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:39 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:41 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:41 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:56 -0800
+Started PUT "/__web_console/repl_sessions/7e2f6d100d565fe28a5f546594cd6c51" for ::1 at 2018-11-27 13:55:57 -0800
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/pets" for ::1 at 2018-11-27 13:56:39 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LDzzrQVTR0ampaChJuJt2X2WJE9qVOO4p3UkyKOKR3V7eY3w597IGUmcvT5hMEtnBM4+RKj+FmC4YNwK9coraQ==", "pet"=>{"name"=>"1a", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" = $1 LIMIT $2[0m  [["name", "1a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (1.1ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (33.7ms)
+  Rendered pets/new.slim within layouts/application (38.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 58.2ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/users/1" for ::1 at 2018-11-27 13:56:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering users/show.slim within layouts/application
+  [1m[36mPet Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.slim within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `species' for #<Pet:0x00007fedbcd51888>
+Did you mean?  species_id):
+     8:   h3 #{@user.username}'s Pets
+     9:   - @user.pets.each do |pet|
+    10:     div= pet.name
+    11:     div= pet.species.name
+    12:     div= (Time.now - pet.created_at.to_time)/1.day
+    13:     div.age= time_alive(@pet)
+    14:     - pet.pet_stats.each do |pet_stat|
+  
+app/views/users/show.slim:11:in `block in _app_views_users_show_slim___1628971916139303226_70329518696500'
+app/views/users/show.slim:9:in `_app_views_users_show_slim___1628971916139303226_70329518696500'
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT  "pets".* FROM "pets" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/pets/new" for ::1 at 2018-11-27 13:57:16 -0800
+Processing by PetsController#new as HTML
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.4ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (7.5ms)
+  Rendered pets/new.slim within layouts/application (12.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/pets" for ::1 at 2018-11-27 13:57:20 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5NmwDqajMb7IfhaNOWGKRhKl9PLSXpqHI/YpB6zVw26znM5TRC6+4SdHCxJ+s6z4a/3u+RD0b18849HF+pWvcg==", "pet"=>{"name"=>"1a", "species_id"=>"1", "color_id"=>"1"}, "commit"=>"Manifest!"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPet Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "pets" WHERE "pets"."name" = $1 LIMIT $2[0m  [["name", "1a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering pets/new.slim within layouts/application
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species"[0m
+  [1m[36mColor Load (0.2ms)[0m  [1m[34mSELECT "colors".* FROM "colors"[0m
+  [1m[36mStat Load (0.2ms)[0m  [1m[34mSELECT "stats".* FROM "stats"[0m
+  Rendered pets/_form.slim (21.2ms)
+  Rendered pets/new.slim within layouts/application (31.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 51.4ms | ActiveRecord: 2.9ms)
+
+
